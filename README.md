@@ -1,7 +1,9 @@
 # CLASSIFYING THE SEVERITY OF DIABETIC RETINOPATHY FROM RETINAL FUNDUS IMAGES 
 
 ## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
-This project develops an AI model to automatically detect and classify diabetic retinopathy, a serious eye condition caused by diabetes, using retinal images. The model analyses small, coloured images of the back of the eye to identify five levels of severity: no disease, mild, moderate, severe, or proliferative. By training on a dataset of 2,400 images, the AI learns to spot patterns indicating disease severity, aiming to assist doctors in early diagnosis. Despite challenges with imbalanced data, the model achieves moderate accuracy, offering a foundation for future improvements in medical image analysis.
+This project forms part of the course work for the Imperial College Professional Certificate in Machine Learning and Artificial Intelligence.
+
+It develops an AI model to automatically detect and classify diabetic retinopathy, a serious eye condition caused by diabetes, using retinal images. The model analyses small, coloured images of the back of the eye to identify five levels of severity: no disease, mild, moderate, severe, or proliferative. By training on a dataset of 2,400 images, the AI learns to spot patterns indicating disease severity, aiming to assist doctors in early diagnosis. Despite challenges with imbalanced data, the model achieves moderate accuracy, offering a foundation for future improvements in medical image analysis.
 
 ## DATA
 The project uses the RetinaMNIST dataset, a subset of the MedMNIST v2 benchmark, containing 2,400 retinal fundus images (1,600 training, 400 validation, 400 test) resized to 64x64 pixels in RGB format. Each image is labelled with one of five diabetic retinopathy severity levels: No DR, Mild, Moderate, Severe, or Proliferative DR. The dataset is derived from the EyePACS Kaggle Diabetic Retinopathy Detection dataset, pre-processed for research use.
