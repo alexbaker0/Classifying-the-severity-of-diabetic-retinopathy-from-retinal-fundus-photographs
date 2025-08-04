@@ -1,4 +1,4 @@
-# Classifying severity of diabetic retinopathy from retinal fundus images - MODEL CARD
+# Classifying Severity of Diabetic Retinopathy from Retinal Fundus Images - MODEL CARD
 
 ## Model Description
 
