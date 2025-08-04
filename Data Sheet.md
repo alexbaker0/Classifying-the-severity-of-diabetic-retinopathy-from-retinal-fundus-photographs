@@ -1,4 +1,4 @@
-# Datasheet Template
+# Classifying severity of diabetic retinopathy from retinal fundus images - DATASHEET
 
 ## Motivation
 
