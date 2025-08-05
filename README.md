@@ -5,11 +5,12 @@ This project forms part of the course work for the Imperial College Professional
 It develops an AI model to automatically detect and classify diabetic retinopathy, a serious eye condition caused by diabetes, using retinal images. The model analyses small, coloured images of the back of the eye to identify five levels of severity: no disease, mild, moderate, severe, or proliferative. By training on a dataset of 2,400 images, the AI learns to spot patterns indicating disease severity, aiming to assist doctors in early diagnosis. Despite challenges with imbalanced data, the model achieves moderate accuracy, offering a foundation for future improvements in medical image analysis.
 
 ## DATA
-The project uses the RetinaMNIST dataset, a subset of the MedMNIST v2 benchmark, containing 2,400 retinal fundus images (1,600 training, 400 validation, 400 test) resized to 64x64 pixels in RGB format. Each image is labelled with one of five diabetic retinopathy severity levels: No DR, Mild, Moderate, Severe, or Proliferative DR. The dataset is derived from the EyePACS Kaggle Diabetic Retinopathy Detection dataset, pre-processed for research use.
+The project uses the RetinaMNIST dataset from MedMNIST v3.0.2, comprising 2,400 retinal fundus images (1,600 training, 400 validation, 400 test) resized to 64x64 pixels in RGB format. Each image is labeled with one of five DR severity levels: No DR (~50%), Mild (~10%), Moderate (~20%), Severe (~10%), or Proliferative DR (~10%). Derived from the DeepDRiD dataset, RetinaMNIST is preprocessed for research use. Images are normalized with `mean=0.5`, `std=0.5`. Training data includes augmentation: random horizontal flips (p=0.5), rotations (60°), resized crops (scale 0.6–1.0), color jitter (brightness, contrast, saturation=0.5, hue=0.1), affine transforms (translation=0.1, scale=0.8–1.2), and Gaussian blur (kernel=3, sigma=0.1–2.0).
 
 **Citation**:
-- Yang, J., et al. "MedMNIST v2: A Large-Scale Lightweight Benchmark for 2D and 3D Biomedical Image Classification." Scientific Data 8, 207 (2021).
-- EyePACS dataset: Kaggle Diabetic Retinopathy Detection (https://www.kaggle.com/c/diabetic-retinopathy-detection).
+- Yang, J., et al. "MedMNIST v3: A Large-Scale Lightweight Benchmark for 2D and 3D Biomedical Image Classification." *Scientific Data* (2024). DOI: 10.1038/s41597-024-03629-z.
+- DeepDRiD dataset: https://github.com/DeepDRiD/DeepDRiD.
+- MedMNIST v3.0.2: https://github.com/MedMNIST/MedMNIST/.
 
 ## MODEL
 The model, `RetinaCNN_BO`, is a convolutional neural network (CNN) designed for lightweight classification of diabetic retinopathy on RetinaMNIST. It has three convolutional layers (with 16, 32, 64 filters in the best configuration), each followed by batch normalization, ReLU activation, and max-pooling, and two fully connected layers (128 units, then 5 units) with dropout (0.589). Focal loss and weighted sampling address class imbalance. This architecture was chosen for its simplicity, suitability for small datasets, and computational efficiency, making it ideal for rapid prototyping and educational purposes. 
