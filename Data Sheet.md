@@ -16,7 +16,7 @@ RetinaMNIST is a subset of the MedMNIST benchmark, curated by the MedMNIST team 
 
 ## Composition
 
-### Instances Represent:
+### Instance representation:
 
 Each instance is a 64×64 pixel RGB image of a human retina (fundus photograph), labeled with the grade of diabetic retinopathy present.
 
