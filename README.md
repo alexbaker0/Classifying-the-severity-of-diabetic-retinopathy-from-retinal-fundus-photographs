@@ -13,7 +13,7 @@ The project uses the RetinaMNIST dataset from MedMNIST v3.0.2, comprising 2,400 
 - MedMNIST v3.0.2: https://github.com/MedMNIST/MedMNIST/.
 
 ## MODEL
-The model, `RetinaCNN_BO`, is a convolutional neural network (CNN) designed for lightweight classification of diabetic retinopathy on RetinaMNIST. It has three convolutional layers (with 16, 32, 64 filters in the best configuration), each followed by batch normalization, ReLU activation, and max-pooling, and two fully connected layers (128 units, then 5 units) with dropout (0.589). Focal loss and weighted sampling address class imbalance. This architecture was chosen for its simplicity, suitability for small datasets, and computational efficiency, making it ideal for rapid prototyping and educational purposes. 
+The model, `RetinaCNN_BO`, is a convolutional neural network (CNN) designed for lightweight classification of diabetic retinopathy on RetinaMNIST. It has three convolutional layers (with 16, 32, 64 filters in the best configuration), each followed by batch normalization, ReLU activation, and max-pooling, and two fully connected layers (128 units, then 5 units) with dropout (0.589). Focal loss and weighted sampling address class imbalance. This architecture was chosen for its simplicity, expected suitability for small datasets, and computational efficiency given I have no GPU! 
 
 ## HYPERPARAMETER OPTIMISATION
 The model optimizes five hyperparameters using Bayesian optimization with TPESampler over 50 trials:
